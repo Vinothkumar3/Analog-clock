@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #e25b5b;
+   
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image:url('./time-bg.png');
+
+}
+
+.container{
+position: relative;
+}
+
+.clock{
+    
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    /* background-color: rgba(140, 145, 145, 0.925); */
+    background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.25);
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform:rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+}
+
+
+
+
+.clock::before{
+    content:"";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+
+}
+
+.hand{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+
+}
+
+.hand i{
+    position: absolute;
+    background-color:var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+
+    
+}
